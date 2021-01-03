@@ -3,13 +3,13 @@ A cli tool to upload a file to linode object storage
 
 # Installation
 ```bash
-npm i -g linode-upload
+npm i -g linode-object-upload
 ```
 
 # Usage
 The cli is all done via a single command.
 ```bash
-linode-upload <file> <bucket> <region> -key key -secret secret
+linode-object-upload <file> <bucket> <region> -key key -secret secret
 ```
 
 Options (all are required)<br>

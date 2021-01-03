@@ -1,9 +1,9 @@
 {
   "name": "linode-object-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli tool to help you upload to linode object storage",
   "bin": {
-    "linode-upload": "bin/linode-upload.js"
+    "linode-object-upload": "bin/linode-upload.js"
   },
   "dependencies": {
     "aws-sdk": "^2.820.0",
