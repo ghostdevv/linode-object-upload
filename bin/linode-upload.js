@@ -22,7 +22,7 @@ if (!file) return console.log('Please provide a file path');
 
 const fileName = path.basename(file);
 
-readFile(path.join(process.cwd(), file), {}, (error, data) => {
+readFile(path.resolve(file), {}, (error, data) => {
     if (error) return console.log('There was a error reading your file\n' + error);
 
     const client = new aws.S3({
