@@ -1,7 +1,7 @@
 {
   "name": "linode-object-upload",
   "version": "1.0.0",
-  "description": "",
+  "description": "A cli tool to help you upload to linode object storage",
   "bin": {
     "linode-upload": "bin/linode-upload.js"
   },
@@ -10,7 +10,16 @@
     "dashargs": "^4.1.2",
     "dotenv": "^8.2.0"
   },
-  "keywords": [],
+  "keywords": [
+    "linode",
+    "object",
+    "storage",
+    "linode cli",
+    "linode object storage",
+    "linode oss",
+    "oss",
+    "cli"
+  ],
   "author": "https://github.com/ghostdevv",
-  "license": "ISC"
+  "license": "MIT"
 }
