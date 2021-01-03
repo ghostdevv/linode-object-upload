@@ -43,5 +43,5 @@ readFile(path.resolve(file), {}, (error, data) => {
     })
     .promise()
     .then(() => console.log('Uploaded'))
-    .catch(e => console.error('Error in uploading\n' + e));
+    .catch(e => (console.error('Error in uploading\n' + e), process.exit(1)));
 });
