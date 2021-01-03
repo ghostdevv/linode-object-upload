@@ -1,0 +1,16 @@
+{
+  "name": "linode-object-upload",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "linode-upload": "bin/linode-upload.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.820.0",
+    "dashargs": "^4.1.2",
+    "dotenv": "^8.2.0"
+  },
+  "keywords": [],
+  "author": "https://github.com/ghostdevv",
+  "license": "ISC"
+}
