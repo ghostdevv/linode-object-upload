@@ -25,29 +25,32 @@ if (!file) return console.log('Please provide a file path');
 
 const fileName = path.basename(file);
 
-readFile(path.resolve(file), {}, (error, data) => {
+const client = new aws.S3({
+    accessKeyId: key,
+    secretAccessKey: secret,
+    endpoint: new aws.Endpoint(
+        joinURL('https://', region + '.linodeobjects.com'),
+    ),
+});
+
+readFile(path.resolve(file), {}, async (error, data) => {
     if (error)
         return console.log('There was a error reading your file\n' + error);
 
-    const client = new aws.S3({
-        accessKeyId: key,
-        secretAccessKey: secret,
-        endpoint: new aws.Endpoint(
-            joinURL('https://', region + '.linodeobjects.com'),
-        ),
-    });
-
     console.log('Uploading...');
 
-    client
-        .putObject({
-            Bucket: bucket,
-            Key: fileName,
-            Body: data,
-        })
-        .promise()
-        .then(() => console.log('Uploaded'))
-        .catch(
-            (e) => (console.error('Error in uploading\n' + e), process.exit(1)),
-        );
+    try {
+        await client
+            .putObject({
+                Bucket: bucket,
+                Key: fileName,
+                Body: data,
+            })
+            .promise();
+
+        console.log(`Uploaded ${file}`);
+    } catch (e) {
+        console.error('Error in uploading\n' + e);
+        process.exit(1);
+    }
 });
