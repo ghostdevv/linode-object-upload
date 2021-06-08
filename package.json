@@ -1,6 +1,6 @@
 {
   "name": "linode-object-upload",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A cli tool to help you upload to linode object storage",
   "bin": {
     "linode-object-upload": "bin/linode-upload.js"
