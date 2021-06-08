@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-require('dotenv').config();
 const aws = require('aws-sdk');
 const dash = require('dashargs');
 const path = require('path');
