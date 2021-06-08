@@ -21,5 +21,12 @@
     "cli"
   ],
   "author": "https://github.com/ghostdevv",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghostdevv/linode-object-upload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ghostdevv/linode-object-upload/issues"
+  }
 }
