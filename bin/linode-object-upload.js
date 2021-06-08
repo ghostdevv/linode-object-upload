@@ -8,18 +8,19 @@ const { readFile } = require('fs');
 
 const args = dash.argv();
 
-const { key, secret } = args;
-const file = process.argv[2];
-const bucket = process.argv[3];
-const region = process.argv[4];
+const { key, secret, file, bucket, region } = args;
+
+if (!key) return console.log('Please provide your access key | -key key');
 
 if (!bucket)
     return console.log('Please provide a bucket | -bucket bucket-name');
-if (!key) return console.log('Please provide your access key | -key key');
+
 if (!secret)
     return console.log('Please provide your access secret | -secret secret');
+
 if (!region)
     return console.log('Please provide your region | -region us-east-1');
+
 if (!file) return console.log('Please provide a file path');
 
 const fileName = path.basename(file);
