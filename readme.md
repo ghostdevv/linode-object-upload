@@ -9,14 +9,15 @@ npm i -g linode-object-upload
 # Usage
 The cli is all done via a single command.
 ```bash
-linode-object-upload <file> <bucket> <region> -key key -secret secret
+linode-object-upload -file file -bucket bucket -region region -key key -secret secret
 ```
 
 Options (all are required)<br>
-`bucket` this is the bucket to put the object in to<br>
-`key` this is the access key<br>
-`secret` this is the access secret<br>
-`region` this is the linode region, for example `eu-central-1`
+- `file` The file to upload
+- `bucket` this is the bucket to put the object in to<br>
+- `key` this is the access key<br>
+- `secret` this is the access secret<br>
+- `region` this is the linode region, for example `eu-central-1`
 
 # Tips
 - ### Find Region
